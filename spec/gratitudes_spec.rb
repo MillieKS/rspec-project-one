@@ -1,10 +1,10 @@
 require 'gratitudes'
 
 RSpec.describe Gratitudes do
-  it "creates an empty array" do
-    gratitudes = []
-    result = gratitudes
-    expect(result).to eq []
+  it "prints when there is no input" do
+    gratitudes = Gratitudes.new
+    result = gratitudes.format
+    expect(result).to eq "Be grateful for: "
   end
 
   # it "adds a gratitude" do
