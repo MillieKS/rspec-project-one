@@ -8,6 +8,10 @@ RSpec.describe PasswordChecker do
     end
   end
 
-
+  context "if password is less than 8" do
+    it "fails" do
+      password = PasswordChecker.new
+      expect{ password.check("Milk") }.to raise_error "Invalid password, must be 8+ characters."
+    end
+  end
 end
-
